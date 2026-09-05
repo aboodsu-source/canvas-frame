@@ -170,12 +170,12 @@
     position: relative;
   }
 
-  /* Gold border around QR */
+  /* Navy border at 60% opacity around QR */
   .front .qr-frame::before {
     content: '';
     position: absolute;
     inset: 0;
-    border: 0.3mm solid var(--gold);
+    border: 0.3mm solid rgba(26, 39, 68, 0.6);
     pointer-events: none;
   }
 
@@ -306,8 +306,8 @@
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, 500, 500);
 
-  // Gold modules
-  ctx.fillStyle = '#c9a23c';
+  // Navy modules at 60% opacity
+  ctx.fillStyle = 'rgba(26, 39, 68, 0.6)';
   for (var r = 0; r < modules; r++) {
     for (var c = 0; c < modules; c++) {
       if (qr.isDark(r, c)) {
