@@ -93,7 +93,9 @@
     top: 6mm; left: 6mm; right: 6mm; bottom: 6mm;
     display: flex;
     flex-direction: row-reverse;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    gap: 4mm;
     z-index: 1;
   }
 
@@ -104,7 +106,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2mm;
+    padding: 2mm;
   }
 
   .front .logo-wrap {
@@ -126,7 +128,7 @@
     display: flex;
     align-items: center;
     gap: 2mm;
-    width: 70%;
+    width: 60%;
     margin: 1.5mm 0;
   }
   .front .divider .ln { flex: 1; height: 0.25mm; background: var(--gold); }
@@ -141,7 +143,7 @@
   }
 
   .front .hint {
-    margin-top: auto;
+    margin-top: 2mm;
     font-size: 4pt;
     color: var(--muted);
     text-align: center;
@@ -149,46 +151,37 @@
     font-weight: 400;
   }
 
-  /* ── Vertical gold divider ── */
-  .front .vline {
-    width: 0.25mm;
-    background: var(--gold);
-    align-self: stretch;
-    margin: 4mm 0;
-    opacity: 0.6;
-    flex-shrink: 0;
-  }
+
 
   /* ── Left column: QR ── */
   .front .qr-col {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2mm;
+    padding: 1mm;
   }
 
   .front .qr-frame {
-    width: 34mm;
-    height: 34mm;
+    width: 36mm;
+    height: 36mm;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
   }
 
-  /* Navy border around QR */
+  /* Gold border around QR */
   .front .qr-frame::before {
     content: '';
     position: absolute;
     inset: 0;
-    border: 0.3mm solid var(--navy);
+    border: 0.3mm solid var(--gold);
     pointer-events: none;
   }
 
   .front .qr-frame canvas {
-    width: 31mm;
-    height: 31mm;
+    width: 33mm;
+    height: 33mm;
     display: block;
   }
 
@@ -262,9 +255,6 @@
       </div>
     </div>
 
-    <!-- Gold divider -->
-    <div class="vline"></div>
-
     <!-- Brand — right -->
     <div class="brand-col">
       <div class="logo-wrap">
@@ -316,8 +306,8 @@
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, 500, 500);
 
-  // Navy modules
-  ctx.fillStyle = '#1a2744';
+  // Gold modules
+  ctx.fillStyle = '#c9a23c';
   for (var r = 0; r < modules; r++) {
     for (var c = 0; c < modules; c++) {
       if (qr.isDark(r, c)) {
