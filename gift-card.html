@@ -28,7 +28,7 @@
   }
 
   :root {
-    --navy: #1a2744;
+    --navy: #032b44;
     --gold: #c9a23c;
     --white: #ffffff;
     --muted: #8a9bb5;
@@ -66,7 +66,7 @@
     flex-shrink: 0;
   }
 
-  /* Gold border frame — at trim line */
+  /* Gold border frame */
   .card::before {
     content: '';
     position: absolute;
@@ -89,89 +89,59 @@
   /* ═══════════════ FRONT ═══════════════ */
   .front .inner {
     position: absolute;
-    top: 3mm; left: 3mm; right: 3mm; bottom: 3mm;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    gap: 5mm;
-    z-index: 1;
-  }
-
-  /* ── Right: brand ── */
-  .front .brand-col {
+    inset: 6mm;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    gap: 4mm;
+    z-index: 1;
   }
 
-  .front .logo-wrap {
+  .front .logo {
+    width: 40mm;
+    height: auto;
+  }
+
+  .front .slogan {
+    width: 28mm;
+    height: auto;
+  }
+
+  .front .qr-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5mm;
+    margin-top: 2mm;
+  }
+
+  .front .qr-box {
+    width: 16mm;
+    height: 16mm;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .front .logo-wrap img {
-    max-height: 12mm;
-    max-width: 28mm;
-    object-fit: contain;
+  .front .qr-box canvas {
+    width: 100%;
+    height: 100%;
     display: block;
-  }
-
-  .front .tagline {
-    font-size: 5.5pt;
-    color: var(--navy);
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    margin-top: 1.5mm;
-    text-align: center;
   }
 
   .front .hint {
     font-size: 4pt;
     color: var(--muted);
     text-align: center;
-    line-height: 1.5;
     font-weight: 400;
-    margin-top: 1mm;
-  }
-
-  /* ── Left: QR ── */
-  .front .qr-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .front .qr-frame {
-    width: 35mm;
-    height: 35mm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .front .qr-frame::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 0.3mm solid var(--gold);
-    pointer-events: none;
-  }
-
-  .front .qr-frame canvas {
-    width: 32mm;
-    height: 32mm;
-    display: block;
+    letter-spacing: 0.02em;
   }
 
   /* ═══════════════ BACK ═══════════════ */
   .back .inner {
     position: absolute;
-    top: 3mm; left: 3mm; right: 3mm; bottom: 3mm;
+    inset: 8mm;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,7 +154,6 @@
     display: flex;
     flex-direction: column;
     gap: 8mm;
-    padding: 0 10mm;
   }
 
   .back .line {
@@ -211,7 +180,6 @@
       page-break-after: always;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
-      color-adjust: exact;
     }
     .card:last-child { page-break-after: avoid; }
   }
@@ -230,16 +198,10 @@
   <span class="c tl"></span><span class="c tr"></span>
   <span class="c bl"></span><span class="c br"></span>
   <div class="inner">
-    <div class="qr-col">
-      <div class="qr-frame">
-        <canvas id="qrCanvas"></canvas>
-      </div>
-    </div>
-    <div class="brand-col">
-      <div class="logo-wrap">
-        <img src="Untitled-2.png" alt="CANVAS FRAME">
-      </div>
-      <p class="tagline">أجمل لوحة فنية</p>
+    <img src="logo.svg" class="logo" alt="CANVAS FRAME">
+    <img src="slogan.svg" class="slogan" alt="أجمل لوحة فنية">
+    <div class="qr-area">
+      <div class="qr-box"><canvas id="qrCanvas"></canvas></div>
       <p class="hint">امسح الكود لزيارة قصتنا</p>
     </div>
   </div>
@@ -279,7 +241,7 @@
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, 500, 500);
 
-  ctx.fillStyle = '#c9a23c';
+  ctx.fillStyle = 'rgba(3, 43, 68, 0.45)';
   for (var r = 0; r < modules; r++) {
     for (var c = 0; c < modules; c++) {
       if (qr.isDark(r, c)) {
