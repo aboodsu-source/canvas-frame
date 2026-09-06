@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>العناية بالإطار | Frame Care — كانفس فريم</title>
+<style>
+  @font-face {
+    font-family: 'DG Tebian';
+    src: url('fonts/DGTebian-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DG Tebian';
+    src: url('fonts/DGTebian-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DG Tebian';
+    src: url('fonts/DGTebian-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --navy: #032b44;
+    --gold: #c9a23c;
+    --white: #ffffff;
+    --muted: #8a9bb5;
+    --bg: #f5f5f5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    font-family: 'DG Tebian', 'Segoe UI', Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--navy);
+    line-height: 1.7;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .title-ar {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .title-en {
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  /* Section */
+  .section {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .section-title-ar {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--navy);
+  }
+
+  .section-title-en {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  /* Steps */
+  .step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  .step:last-child {
+    margin-bottom: 0;
+  }
+
+  .step-num {
+    width: 32px;
+    height: 32px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    flex: 1;
+  }
+
+  .step-ar {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .step-en {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* Care tips */
+  .tip {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+
+  .tip:last-child {
+    margin-bottom: 0;
+  }
+
+  .tip-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .tip-text-ar {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .tip-text-en {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to left, transparent, var(--gold), transparent);
+    margin: 20px 0;
+    opacity: 0.4;
+  }
+
+  /* Contact */
+  .contact-section {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .contact-ar {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .contact-en {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #25d366;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+
+  .btn:hover {
+    background: #1da851;
+  }
+
+  .url {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .url a {
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  /* Print */
+  @media print {
+    body { background: none; }
+    .section, .contact-section { box-shadow: none; border: 1px solid #eee; }
+    .btn { border: 2px solid #25d366; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <img src="logo.svg" class="logo" alt="CANVAS FRAME">
+    <h1 class="title-ar">العناية بالإطار</h1>
+    <p class="title-en">Frame Care &amp; Assembly</p>
+  </div>
+
+  <!-- Assembly Instructions -->
+  <div class="section">
+    <h2 class="section-title-ar">كيف تعلق الإطار</h2>
+    <p class="section-title-en">How to hang your frame</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <p class="step-ar">اختر المكان المناسب على الحائط</p>
+        <p class="step-en">Choose the right spot on the wall</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <p class="step-ar">ثبت المسمار أو الخطاف في الحائط</p>
+        <p class="step-en">Insert a nail or hook into the wall</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <p class="step-ar">علّق الإطار على المسمار</p>
+        <p class="step-en">Hang the frame on the nail</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <p class="step-ar">تأكد من أن الإطار مستقيم وثابت</p>
+        <p class="step-en">Make sure the frame is level and secure</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Care Tips -->
+  <div class="section">
+    <h2 class="section-title-ar">نصائح العناية</h2>
+    <p class="section-title-en">Care tips</p>
+
+    <div class="tip">
+      <span class="tip-icon">&#9728;</span>
+      <div>
+        <p class="tip-text-ar">تجنب Exposure المباشر لأشعة الشمس</p>
+        <p class="tip-text-en">Avoid direct sunlight to prevent fading</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="tip">
+      <span class="tip-icon">&#10052;</span>
+      <div>
+        <p class="tip-text-ar">استخدم قماشاً ناعماً لتنظيف الإطار</p>
+        <p class="tip-text-en">Use a soft cloth to dust the frame</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="tip">
+      <span class="tip-icon">&#9888;</span>
+      <div>
+        <p class="tip-text-ar">لا تستخدم مواد كيميائية قاسية</p>
+        <p class="tip-text-en">Do not use harsh chemicals or cleaners</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="tip">
+      <span class="tip-icon">&#128161;</span>
+      <div>
+        <p class="tip-text-ar">أعد تثبيت الإطار إذا كان غير مستقر</p>
+        <p class="tip-text-en">Re-secure the frame if it becomes loose</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-section">
+    <p class="contact-ar">هل تحتاج مساعدة؟</p>
+    <p class="contact-en">Need help? Contact us on WhatsApp</p>
+    <a href="https://wa.me/966536234521" class="btn" target="_blank">
+      &#128172; واتساب / WhatsApp
+    </a>
+    <p class="url">
+      <a href="https://aboodsu-source.github.io/canvas-frame/">canvas-frame.com</a>
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

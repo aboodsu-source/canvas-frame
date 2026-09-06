@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>كانفس فريم — بطاقة هدية</title>
+<title>كانفس فريم — بطاقة هدية | Canvas Frame — Gift Card</title>
 <style>
   @font-face {
     font-family: 'DG Tebian';
@@ -138,6 +138,21 @@
     letter-spacing: 0.02em;
   }
 
+  .front .gift-title {
+    font-size: 6pt;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    margin-top: 1mm;
+  }
+
+  .front .gift-title-en {
+    font-size: 4.5pt;
+    color: var(--muted);
+    text-align: center;
+    font-weight: 400;
+  }
+
   /* ═══════════════ BACK ═══════════════ */
   .back .inner {
     position: absolute;
@@ -200,9 +215,11 @@
   <div class="inner">
     <img src="logo.svg" class="logo" alt="CANVAS FRAME">
     <img src="slogan.svg" class="slogan" alt="أجمل لوحة فنية">
+    <p class="gift-title">بطاقة هدية</p>
+    <p class="gift-title-en">Gift Card</p>
     <div class="qr-area">
       <div class="qr-box"><canvas id="qrCanvas"></canvas></div>
-      <p class="hint">امسح الكود لزيارة قصتنا</p>
+      <p class="hint">امسح الكود لزيارة قصتنا<br><span style="font-size:3.5pt;color:#8a9bb5;">Scan to visit our story</span></p>
     </div>
   </div>
 </div>
@@ -220,7 +237,7 @@
       <div class="line"></div>
     </div>
     <p class="url">CANVAS-FRAME.COM</p>
-    <a href="https://wa.me/966536234521" target="_blank" style="font-size:5pt;color:#8a9bb5;text-decoration:none;margin-top:2mm;">WhatsApp: +966 53 623 4521</a>
+    <a href="https://wa.me/966536234521" target="_blank" style="font-size:5pt;color:#8a9bb5;text-decoration:none;margin-top:2mm;">واتساب / WhatsApp: +966 53 623 4521</a>
   </div>
 </div>
 
