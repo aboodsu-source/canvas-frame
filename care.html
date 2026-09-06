@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>العناية بالإطار | Frame Care — كانفس فريم</title>
+<title>كانفس فريم — بطاقة هدية | Canvas Frame — Gift Card</title>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="العناية بالإطار | Frame Care — كانفس فريم">
-<meta property="og:description" content="دليل العناية وإعلاء إطار كانفس فريم | Canvas Frame care and assembly guide">
+<meta property="og:title" content="كانفس فريم — بطاقة هدية | Canvas Frame — Gift Card">
+<meta property="og:description" content="بطاقة هدية من كانفس فريم | A gift from Canvas Frame">
 <meta property="og:image" content="https://aboodsu-source.github.io/canvas-frame/logo.svg">
 <meta property="og:url" content="https://aboodsu-source.github.io/canvas-frame/care.html">
 <meta property="og:site_name" content="Canvas Frame">
@@ -18,19 +18,19 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@canvasframe_sa">
-<meta name="twitter:title" content="العناية بالإطار | Frame Care — كانفس فريم">
-<meta name="twitter:description" content="دليل العناية وإعلاء إطار كانفس فريم | Canvas Frame care and assembly guide">
+<meta name="twitter:title" content="كانفس فريم — بطاقة هدية | Canvas Frame — Gift Card">
+<meta name="twitter:description" content="بطاقة هدية من كانفس فريم | A gift from Canvas Frame">
 <meta name="twitter:image" content="https://aboodsu-source.github.io/canvas-frame/logo.svg">
 
 <!-- TikTok -->
 <meta name="tiktok:card" content="summary_large_image">
-<meta name="tiktok:title" content="العناية بالإطار | Frame Care — كانفس فريم">
-<meta name="tiktok:description" content="دليل العناية وإعلاء إطار كانفس فريم | Canvas Frame care and assembly guide">
+<meta name="tiktok:title" content="كانفس فريم — بطاقة هدية | Canvas Frame — Gift Card">
+<meta name="tiktok:description" content="بطاقة هدية من كانفس فريم | A gift from Canvas Frame">
 <meta name="tiktok:image" content="https://aboodsu-source.github.io/canvas-frame/logo.svg">
-<meta name="tiktok:site" content="@canvasframe">
+<meta name="tiktok:site" content="@canvasframe_sa">
 
 <!-- General -->
-<meta name="description" content="دليل العناية وإعلاء إطار كانفس فريم | Canvas Frame care and assembly guide">
+<meta name="description" content="بطاقة هدية من كانفس فريم | A gift from Canvas Frame">
 <meta name="theme-color" content="#032b44">
 <style>
   @font-face {
@@ -71,58 +71,112 @@
     -webkit-font-smoothing: antialiased;
     color: var(--navy);
     line-height: 1.7;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px 24px;
-  }
-
-  /* Header */
-  .header {
+  /* ─── Hero Section ─── */
+  .hero {
+    width: 100%;
+    background: linear-gradient(135deg, var(--navy) 0%, #0a4a6e 50%, var(--navy) 100%);
+    padding: 60px 24px 50px;
     text-align: center;
-    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(201,162,60,0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(201,162,60,0.1) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
   }
 
   .logo {
-    width: 80px;
+    width: 100px;
     height: auto;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    filter: brightness(0) invert(1);
   }
 
-  .title-ar {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 4px;
+  .hero-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 1.3;
   }
 
-  .title-en {
-    font-size: 16px;
-    color: var(--muted);
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--gold);
     font-weight: 400;
+    margin-bottom: 24px;
   }
 
-  /* Section */
+  .hero-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto;
+  }
+
+  /* ─── Content Section ─── */
+  .content {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 24px;
+  }
+
   .section {
     background: var(--white);
-    border-radius: 12px;
-    padding: 28px 24px;
+    border-radius: 16px;
+    padding: 32px 24px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
 
-  .section-title-ar {
-    font-size: 20px;
+  .section-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--gold), #d9b44a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .section-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+  }
+
+  .section-title {
+    font-size: 22px;
     font-weight: 700;
     margin-bottom: 4px;
     color: var(--navy);
   }
 
-  .section-title-en {
+  .section-subtitle {
     font-size: 14px;
     color: var(--muted);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-weight: 400;
   }
 
@@ -130,7 +184,7 @@
   .step {
     display: flex;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     align-items: flex-start;
   }
 
@@ -139,15 +193,15 @@
   }
 
   .step-num {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     background: var(--navy);
     color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     flex-shrink: 0;
   }
@@ -156,23 +210,27 @@
     flex: 1;
   }
 
-  .step-ar {
+  .step-title {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 2px;
+    color: var(--navy);
   }
 
-  .step-en {
+  .step-desc {
     font-size: 13px;
     color: var(--muted);
   }
 
-  /* Care tips */
+  /* Tips */
   .tip {
     display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 14px;
+    margin-bottom: 20px;
     align-items: flex-start;
+    padding: 16px;
+    background: var(--bg);
+    border-radius: 12px;
   }
 
   .tip:last-child {
@@ -180,210 +238,269 @@
   }
 
   .tip-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
 
-  .tip-text-ar {
+  .tip-title {
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 2px;
+    color: var(--navy);
   }
 
-  .tip-text-en {
+  .tip-desc {
     font-size: 12px;
     color: var(--muted);
   }
 
-  /* Divider */
-  .divider {
-    height: 1px;
-    background: linear-gradient(to left, transparent, var(--gold), transparent);
-    margin: 20px 0;
-    opacity: 0.4;
+  /* ─── CTA Section ─── */
+  .cta {
+    width: 100%;
+    max-width: 480px;
+    padding: 0 24px 40px;
   }
 
-  /* Contact */
-  .contact-section {
-    text-align: center;
-    padding: 32px 24px;
+  .cta-card {
     background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
 
-  .contact-ar {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 4px;
+  .cta-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--navy);
   }
 
-  .contact-en {
+  .cta-subtitle {
     font-size: 14px;
     color: var(--muted);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   .btn {
-    display: inline-block;
-    padding: 12px 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
     background: #25d366;
     color: var(--white);
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 700;
-    transition: background 0.2s;
+    transition: all 0.2s;
+    width: 100%;
+    margin-bottom: 12px;
   }
 
   .btn:hover {
     background: #1da851;
+    transform: translateY(-1px);
   }
 
-  .url {
-    margin-top: 20px;
-    font-size: 14px;
+  .btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .social-link {
+    width: 48px;
+    height: 48px;
+    background: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .social-link:hover {
+    background: var(--navy);
+  }
+
+  .social-link:hover svg {
+    fill: var(--white);
+    stroke: var(--white);
+  }
+
+  .social-link svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--navy);
+    transition: all 0.2s;
+  }
+
+  .social-link svg.stroke-icon {
+    fill: none;
+    stroke: var(--navy);
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 24px;
     color: var(--muted);
+    font-size: 12px;
   }
 
-  .url a {
-    color: var(--navy);
+  .footer a {
+    color: var(--muted);
     text-decoration: none;
-    border-bottom: 1px solid var(--gold);
   }
 
-  /* Print */
+  /* ─── Print ─── */
   @media print {
     body { background: none; }
-    .section, .contact-section { box-shadow: none; border: 1px solid #eee; }
-    .btn { border: 2px solid #25d366; }
+    .hero { background: var(--navy); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section, .cta-card { box-shadow: none; border: 1px solid #eee; }
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-
-  <!-- Header -->
-  <div class="header">
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-content">
     <img src="logo.svg" class="logo" alt="CANVAS FRAME">
-    <h1 class="title-ar">العناية بالإطار</h1>
-    <p class="title-en">Frame Care &amp; Assembly</p>
+    <h1 class="hero-title">بطاقة هدية</h1>
+    <p class="hero-subtitle">Gift Card</p>
+    <div class="hero-divider"></div>
   </div>
+</div>
 
-  <!-- Assembly Instructions -->
+<!-- Content -->
+<div class="content">
+
+  <!-- Assembly Steps -->
   <div class="section">
-    <h2 class="section-title-ar">كيف تعلق الإطار</h2>
-    <p class="section-title-en">How to hang your frame</p>
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h2 class="section-title">كيف تعلق الإطار</h2>
+    <p class="section-subtitle">How to hang your frame</p>
 
     <div class="step">
       <div class="step-num">1</div>
       <div class="step-content">
-        <p class="step-ar">اختر المكان المناسب على الحائط</p>
-        <p class="step-en">Choose the right spot on the wall</p>
+        <p class="step-title">اختر المكان</p>
+        <p class="step-desc">Choose the right spot on the wall</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">2</div>
       <div class="step-content">
-        <p class="step-ar">ثبت المسمار أو الخطاف في الحائط</p>
-        <p class="step-en">Insert a nail or hook into the wall</p>
+        <p class="step-title">ثبت المسمار</p>
+        <p class="step-desc">Insert a nail or hook into the wall</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-content">
-        <p class="step-ar">علّق الإطار على المسمار</p>
-        <p class="step-en">Hang the frame on the nail</p>
+        <p class="step-title">علّق الإطار</p>
+        <p class="step-desc">Hang the frame on the nail</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">4</div>
       <div class="step-content">
-        <p class="step-ar">تأكد من أن الإطار مستقيم وثابت</p>
-        <p class="step-en">Make sure the frame is level and secure</p>
+        <p class="step-title">تأكد من الاستقرار</p>
+        <p class="step-desc">Make sure the frame is level and secure</p>
       </div>
     </div>
   </div>
 
   <!-- Care Tips -->
   <div class="section">
-    <h2 class="section-title-ar">نصائح العناية</h2>
-    <p class="section-title-en">Care tips</p>
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h2 class="section-title">نصائح العناية</h2>
+    <p class="section-subtitle">Care tips</p>
 
     <div class="tip">
-      <span class="tip-icon">&#9728;</span>
+      <div class="tip-icon">&#9728;</div>
       <div>
-        <p class="tip-text-ar">تجنب Exposure المباشر لأشعة الشمس</p>
-        <p class="tip-text-en">Avoid direct sunlight to prevent fading</p>
+        <p class="tip-title">تجنب أشعة الشمس</p>
+        <p class="tip-desc">Avoid direct sunlight to prevent fading</p>
       </div>
     </div>
 
-    <div class="divider"></div>
-
     <div class="tip">
-      <span class="tip-icon">&#10052;</span>
+      <div class="tip-icon">&#10052;</div>
       <div>
-        <p class="tip-text-ar">استخدم قماشاً ناعماً لتنظيف الإطار</p>
-        <p class="tip-text-en">Use a soft cloth to dust the frame</p>
+        <p class="tip-title">تنظيف بقماش ناعم</p>
+        <p class="tip-desc">Use a soft cloth to dust the frame</p>
       </div>
     </div>
 
-    <div class="divider"></div>
-
     <div class="tip">
-      <span class="tip-icon">&#9888;</span>
+      <div class="tip-icon">&#9888;</div>
       <div>
-        <p class="tip-text-ar">لا تستخدم مواد كيميائية قاسية</p>
-        <p class="tip-text-en">Do not use harsh chemicals or cleaners</p>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="tip">
-      <span class="tip-icon">&#128161;</span>
-      <div>
-        <p class="tip-text-ar">أعد تثبيت الإطار إذا كان غير مستقر</p>
-        <p class="tip-text-en">Re-secure the frame if it becomes loose</p>
+        <p class="tip-title">لا تستخدم مواد كيميائية</p>
+        <p class="tip-desc">Do not use harsh chemicals or cleaners</p>
       </div>
     </div>
   </div>
 
-  <!-- Contact -->
-  <div class="contact-section">
-    <p class="contact-ar">هل تحتاج مساعدة؟</p>
-    <p class="contact-en">Need help? Contact us</p>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="cta-card">
+    <h2 class="cta-title">هل تحتاج مساعدة؟</h2>
+    <p class="cta-subtitle">Need help? Contact us</p>
+    
     <a href="https://wa.me/966536234521" class="btn" target="_blank">
-      &#128172; واتساب / WhatsApp
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.89 9.89 0 0 0 4.62 1.14h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.78.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.4c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.83 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.23 8.22Z"/></svg>
+      تواصل عبر واتساب
     </a>
-    <p class="url">
-      <a href="https://aboodsu-source.github.io/canvas-frame/">canvas-frame.com</a>
-    </p>
-  </div>
 
-  <!-- Social -->
-  <div class="contact-section" style="margin-top:20px;">
-    <p class="contact-ar">تابعنا</p>
-    <p class="contact-en">Follow us for updates</p>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px;">
-      <a href="https://www.tiktok.com/@canvasframe_sa" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid #d1d5db;text-decoration:none;color:#032b44;font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.8a4.84 4.84 0 01-1-.11z"/></svg>
-        TikTok
+    <div class="social-links">
+      <a class="social-link" href="https://www.tiktok.com/@canvasframe_sa" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.8a4.84 4.84 0 01-1-.11z"/></svg>
       </a>
-      <a href="https://x.com/canvasframe_sa" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid #d1d5db;text-decoration:none;color:#032b44;font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        X (Twitter)
+      <a class="social-link" href="https://x.com/canvasframe_sa" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </a>
-      <a href="https://instagram.com/canvasframe.sa" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid #d1d5db;text-decoration:none;color:#032b44;font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-        Instagram
+      <a class="social-link" href="https://instagram.com/canvasframe.sa" target="_blank">
+        <svg class="stroke-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      </a>
+      <a class="social-link" href="https://wa.me/966536234521" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.89 9.89 0 0 0 4.62 1.14h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.78.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.4c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.83 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.23 8.22Z"/></svg>
       </a>
     </div>
   </div>
+</div>
 
+<!-- Footer -->
+<div class="footer">
+  <p>© 2026 Canvas Frame — كانفس فريم</p>
+  <p style="margin-top:4px;"><a href="https://canvas-frame.com">canvas-frame.com</a></p>
 </div>
 
 </body>
