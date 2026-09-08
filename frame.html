@@ -37,18 +37,12 @@
     /* brand */
     --navy:       #032b44;
     --gold:       #c9a23c;
-    /* brushed aluminium */
-    --steel-hi:   #d6dade;
-    --steel:      #b3b9bf;
-    --steel-lo:   #7d858d;
     /* ground */
     --paper:      #e8e7e3;
     --card:       #f6f5f3;
     --ink:        #14181c;
     --ink-soft:   #5c6269;
     --rule:       #cfcdc8;
-    /* pine stretcher bar under the plate */
-    --pine:       #c2a479;
     /* the one action they came for — kept off --navy so dark mode can't invert it */
     --lead-bg:    #032b44;
     --lead-fg:    #f6f5f3;
@@ -111,71 +105,10 @@
     font-weight: 500;
   }
 
-  /* ─────────────────────────────────────────────
-     SIGNATURE — the edge mark, shown at 2:1 like
-     the real 40 × 20 mm plate on the frame's edge
-     ───────────────────────────────────────────── */
-  .edge { padding: 44px 0 0; }
-
-  .plate {
-    position: relative;
-    aspect-ratio: 2 / 1;
-    border-radius: 3px;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
-    /* anisotropic brush: three grain periods + a cylindrical highlight */
-    background-image:
-      repeating-linear-gradient(180deg,
-        rgba(255,255,255,.55) 0 1px, rgba(0,0,0,0) 1px 2px),
-      repeating-linear-gradient(180deg,
-        rgba(0,0,0,.07) 0 1px, rgba(0,0,0,0) 1px 3px),
-      repeating-linear-gradient(180deg,
-        rgba(0,0,0,.05) 0 1px, rgba(0,0,0,0) 1px 7px),
-      linear-gradient(180deg,
-        var(--steel-lo) 0%, var(--steel) 18%, var(--steel-hi) 42%,
-        var(--steel) 62%, var(--steel-lo) 100%);
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.6),
-      inset 0 -1px 0 rgba(0,0,0,.28),
-      0 10px 24px -12px rgba(0,0,0,.5);
-  }
-
-  /* light travelling across the grain — brushed metal only reads as metal when it moves */
-  .plate::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(100deg,
-      transparent 30%, rgba(255,255,255,.7) 48%, transparent 66%);
-    transform: translateX(-120%);
-    animation: sweep 2.6s cubic-bezier(.4,0,.2,1) .45s both;
-    pointer-events: none;
-  }
-
-  @keyframes sweep { to { transform: translateX(120%); } }
-
-  /* logo artboard is near-square (700 × 684), so bound it by the plate's
-     short axis or it fills the whole 2:1 plate */
-  .plate img {
-    position: relative;
-    z-index: 1;
-    height: 54%;
-    width: auto;
-    /* engraved, not printed: the mark is cut into the metal */
-    filter: brightness(0) opacity(.74);
-  }
-
-  /* the pine stretcher bar the plate is glued to */
-  .pine {
-    height: 3px;
-    background: linear-gradient(180deg, var(--pine), rgba(0,0,0,.25));
-    border-radius: 0 0 2px 2px;
-    opacity: .85;
-  }
-
-  /* ── Statement ── */
-  .statement { padding: 40px 0 36px; }
+  /* ── Statement ──
+     No logo lockup above it on purpose: they just scanned a badge with the
+     mark on it. Repeating it here costs a screenful and tells them nothing. */
+  .statement { padding: 64px 0 36px; }
 
   /* two fragments, their rhythm: the first is pride, the second is the invitation.
      weight and colour carry that split — don't collapse them into one line. */
@@ -268,7 +201,6 @@
   footer a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gold); }
 
   @media (prefers-reduced-motion: reduce) {
-    .plate::after { animation: none; opacity: 0; }
     * { transition: none !important; }
   }
 </style>
@@ -276,14 +208,6 @@
 <body>
 
 <div class="wrap">
-
-  <!-- ─── The mark itself, at plate proportions ─── -->
-  <div class="edge">
-    <div class="plate">
-      <img src="logo.svg" alt="كانفس فريم">
-    </div>
-    <div class="pine"></div>
-  </div>
 
   <!-- ─── Statement ─── -->
   <div class="statement">
