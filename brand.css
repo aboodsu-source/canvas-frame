@@ -37,8 +37,7 @@
   --ink-soft:  #5c6269;
   --rule:      #cfcdc8;
 
-  /* the one action a page wants most — kept off --navy so dark
-     mode can invert the text colour without flipping the surface */
+  /* the one action a page wants most */
   --lead-bg:   #032b44;
   --lead-fg:   #f6f5f3;
   --lead-soft: rgba(255,255,255,.7);
@@ -52,27 +51,15 @@
   --radius:  4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #101418; --card: #171c22; --ink: #e8eaec;
-    --ink-soft: #8b939b; --rule: #262d35; --navy: #e8eaec;
-    --lead-bg: #e8eaec; --lead-fg: #101418; --lead-soft: rgba(16,20,24,.62);
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #101418; --card: #171c22; --ink: #e8eaec;
-  --ink-soft: #8b939b; --rule: #262d35; --navy: #e8eaec;
-  --lead-bg: #e8eaec; --lead-fg: #101418; --lead-soft: rgba(16,20,24,.62);
-}
-:root[data-theme="light"] {
-  --paper: #e8e7e3; --card: #f6f5f3; --ink: #14181c;
-  --ink-soft: #5c6269; --rule: #cfcdc8; --navy: #032b44;
-  --lead-bg: #032b44; --lead-fg: #f6f5f3; --lead-soft: rgba(255,255,255,.7);
-}
+/* Light only, on purpose. Following the visitor's OS preference would mean
+   half of them meet a different-looking brand — and these pages are reached
+   by scanning a badge, so first impression is the whole impression. */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+/* stops the browser painting scrollbars and form controls dark
+   for visitors whose OS is in dark mode */
+html { -webkit-text-size-adjust: 100%; color-scheme: light; }
 
 body {
   background: var(--paper);
