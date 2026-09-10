@@ -92,10 +92,12 @@ body {
 .statement { padding: 64px 0 36px; }
 .statement .stamp { display: block; margin-bottom: 14px; }
 
+/* Heavy Arabic needs more leading than Latin: ascenders (ا ل ط ك) and
+   descenders (ج ح خ ع م ي) stack vertically and collide at tight values. */
 h1 {
   font-size: clamp(30px, 9vw, 38px);
   font-weight: 900;
-  line-height: 1.35;
+  line-height: 1.5;
   letter-spacing: -0.01em;
   color: var(--navy);
 }
@@ -103,6 +105,7 @@ h1 {
 /* second fragment of a two-part headline: the invitation, not the claim */
 h1 span, h1 em {
   display: block;
+  margin-top: 0.18em;
   font-style: normal;
   font-weight: 400;
   color: var(--ink-soft);
@@ -112,7 +115,7 @@ h2 {
   font-size: 22px;
   font-weight: 700;
   color: var(--navy);
-  line-height: 1.4;
+  line-height: 1.55;
 }
 
 p { font-size: 16px; font-weight: 400; line-height: 1.95; }
