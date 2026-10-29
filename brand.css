@@ -92,6 +92,14 @@ body {
 .statement { padding: 64px 0 36px; }
 .statement .stamp { display: block; margin-bottom: 14px; }
 
+/* ── Landing page (contact.html): everything centred ──
+   The card's QR lands here, so the page opens like a formal centred
+   statement, not a right-aligned column. Scoped to the body class —
+   the other pages keep the RTL column. */
+.page-contact .statement,
+.page-contact .statement .stamp,
+.page-contact .card p { text-align: center; }
+
 /* Heavy Arabic needs more leading than Latin: ascenders (ا ل ط ك) and
    descenders (ج ح خ ع م ي) stack vertically and collide at tight values. */
 h1 {
